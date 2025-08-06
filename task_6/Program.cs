@@ -41,26 +41,12 @@ namespace task_6
                 for (int j = 0; j < n; j++)
                 {
                     lines += array[i, j];
-                    columns += array[j, i];                                      
-                }            
-            }
-
-            for (int i = 0; i < n; i++)
-            {
-                for (int j = 0; j < n; j++)
-                {
+                    columns += array[j, i];
                     if (i == j)
                         diagonal_main += array[i, j];
-                }
-            }
-
-            for (int i = 0; i < n; i++)
-            {
-                for (int j = 0; j < n; j++)
-                {                    
                     if (i + j == n - 1)
                         diagonal_not_main += array[i, j];
-                }
+                }            
             }
 
             //Console.WriteLine("{0}, {1}, {2}, {3}", lines / n, columns / n, diagonal_main, diagonal_not_main);
